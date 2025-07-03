@@ -1,0 +1,17 @@
+# https://github.com/typst/hayagriva/blob/main/docs/file-format.md
+
+patter_henne:
+  language: ja
+  type: Book
+  title: 【上・下電子合本版】コンピュータの構成と設計 MIPS Edition 第6版
+  issue: 2
+  edition: 
+  author:
+    - David A. Patterson
+    - John L. Hennessy
+  affiliated:
+    - role: translator
+      names: 成田光彰
+  publisher: 日経BP
+  date: 2022-11-2
+
