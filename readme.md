@@ -21,8 +21,15 @@ function内で定義したユーティリティをcommands.typでimportして定
 
 # ローカルパッケージの導入
 
-導入方法はここに．
+~~導入方法はここに．
 https://github.com/typst/packages?tab=readme-ov-file#local-packages
 
-現状参考文献関連の動作があまり良くないので，それを補うためのパッケージが配布されている．Typst Universには無いのでローカルパッケージとして配置して使う．
+~~現状参考文献関連の動作があまり良くないので，それを補うためのパッケージが配布されている．Typst Universには無いのでローカルパッケージとして配置して使う．
 https://gist.github.com/zr-tex8r/444ba5e27b3deff157b4ed7f62a0fe1a
+
+submoduleとして参照しているので，
+```
+git submodule init
+```
+
+を実行すればOK

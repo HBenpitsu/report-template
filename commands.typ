@@ -2,3 +2,4 @@
 #import "function/components.typ": *
 #import "function/numbering.typ": *
 #import "function/nonum.typ": *
+#import "function/bxbibwrite.typ": *

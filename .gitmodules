@@ -1,0 +1,3 @@
+[submodule "function/bxbibwrite"]
+	path = function/bxbibwrite
+	url = git@gist.github.com:444ba5e27b3deff157b4ed7f62a0fe1a.git
