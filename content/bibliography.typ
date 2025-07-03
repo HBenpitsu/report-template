@@ -1,4 +1,4 @@
-#import "../commands.typ": *
+#import "/commands.typ": *
 // 組み込みの参考文献システム
 // #bibliography("reference.yaml", style: "sist02")
 

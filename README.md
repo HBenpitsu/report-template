@@ -15,7 +15,7 @@ main.typですべてを合成している．それだけ言えばあとはよし
 
 function内で定義したユーティリティをcommands.typでimportして定義を引き上げている．three-line-tableなどをつかいたければ，ファイル冒頭で
 ```typ
-#import "../commands.typ": *
+#import "/commands.typ": *
 ```
 とすればOK
 
@@ -34,4 +34,4 @@ git submodule init
 git submodule update
 ```
 
-を実行すればOK.
+を実行すればOK

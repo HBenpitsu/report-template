@@ -1,4 +1,4 @@
-#import "../commands.typ": *
+#import "/commands.typ": *
 
 = ヘッダ
 
@@ -38,13 +38,13 @@ $ exp $ <eq:2>
 ][ソースコード]
 <code>
 
-#imgfig("../asset/fff.png")[画像]
+#imgfig("/asset/abstract/fff.png")[画像]
 <img>
 
-#imgfig("../asset/fff.png", width: 20em)[画像]
-#imgfig("../asset/fff.png", width: 20em)[画像]
-#imgfig("../asset/fff.png", width: 20em)[画像]
-#imgfig("../asset/fff.png", width: 20em)[画像]
-#imgfig("../asset/fff.png", width: 20em)[画像]
+#imgfig("/asset/abstract/fff.png", width: 20em)[画像]
+#imgfig("/asset/abstract/fff.png", width: 20em)[画像]
+#imgfig("/asset/abstract/fff.png", width: 20em)[画像]
+#imgfig("/asset/abstract/fff.png", width: 20em)[画像]
+#imgfig("/asset/abstract/fff.png", width: 20em)[画像]
 
-#scrfig("../asset/fff.png", <screenshot>)[画像]
+#scrfig("/asset/abstract/fff.png", <screenshot>)[画像]
