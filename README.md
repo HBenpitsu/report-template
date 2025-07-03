@@ -28,8 +28,10 @@ https://github.com/typst/packages?tab=readme-ov-file#local-packages
 https://gist.github.com/zr-tex8r/444ba5e27b3deff157b4ed7f62a0fe1a
 
 submoduleとして参照しているので，
-```
+
+```bash
 git submodule init
+git submodule update
 ```
 
-を実行すればOK
+を実行すればOK.
