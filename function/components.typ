@@ -51,3 +51,17 @@
     #image(path, ..args)
   ]
 }
+
+#let scrfig(path, label, ..args, caption) = {
+  return align(center)[
+    #rotate(
+      -90deg,
+      reflow: true,
+      [
+        #figure(caption: caption)[
+          #image(path, width: 100%, ..args)
+        ]#label
+      ]
+    )
+  ]
+}

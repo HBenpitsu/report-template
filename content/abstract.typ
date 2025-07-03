@@ -11,6 +11,8 @@
 @tab
 @code
 @img
+@screenshot
+リファレンス#[@img]のあとにスペースを開けたくないときは`...#[@...]...`と書くと良い
 
 $ exp $ <eq:1>
 #nonum[
@@ -44,3 +46,5 @@ $ exp $ <eq:2>
 #imgfig("../asset/fff.png", width: 20em)[画像]
 #imgfig("../asset/fff.png", width: 20em)[画像]
 #imgfig("../asset/fff.png", width: 20em)[画像]
+
+#scrfig("../asset/fff.png", <screenshot>)[画像]
