@@ -38,11 +38,20 @@
   ]
 }
 
-#import "@preview/codelst:2.0.2": sourcecode
+#import "@preview/codelst:2.0.2": sourcecode, sourcefile
 
 #let codefig(body, caption) = {
   return figure(caption: caption)[
     #sourcecode[#body]
+  ]
+}
+
+#let filefig(path, caption) = {
+  let parts = path.split("/")
+  let basename = parts.last()
+  let code = read(path)
+  return figure(caption: [#caption (#basename)])[
+    #sourcefile(code, file: path, lang: auto)
   ]
 }
 
