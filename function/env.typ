@@ -15,3 +15,13 @@
   #show figure: set figure(numbering: none)
   #body
 ]
+
+#let pagefit(cont) = [
+  #show figure: set block(breakable: false)
+  #cont
+]
+
+#let pageover(cont) = [
+  #show figure: set block(breakable: true)
+  #cont
+]
