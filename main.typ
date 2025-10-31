@@ -9,6 +9,13 @@
 #show figure.where(kind: raw): set figure.caption(position: top)
 #show math.equation: set math.equation(numbering: "(1.1)")
 
+// 字下げの設定
+#set par(first-line-indent: 1em)
+#show heading: it =>  {
+    it
+    par(text(size:0.5em, ""))
+}
+
 #include "content/cover.typ"
 
 #show: doc => init_context_numbering(doc, "1.1", "1")
