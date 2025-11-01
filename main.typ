@@ -11,10 +11,12 @@
 
 // 字下げの設定
 #set par(first-line-indent: 1em)
-#show heading: it =>  {
-    it
-    par(text(size:0.5em, ""))
+#show block: it => {
+  it
+  par("")
+  v(-par.spacing * 1.5)
 }
+
 
 #include "content/cover.typ"
 
