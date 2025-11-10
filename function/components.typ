@@ -104,7 +104,7 @@
   ]#label
 ]
 
-#let screen(path, label, ..args, caption) = [
+#let screenshot(path, label, ..args, caption) = [
   #set align(center+horizon)
   #page[
     #rotate(
@@ -112,7 +112,7 @@
       reflow: true,
       [
         #figure(caption: caption)[
-          #image(path, width: 100%, ..args)
+          #image(path, height: 100%, ..args)
         ]#label
       ]
     )

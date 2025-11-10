@@ -45,4 +45,4 @@ $ exp $ <eq:2>
 #img("/asset/abstract/fff.png", <dum>, width: 20em)[画像]
 #img("/asset/abstract/fff.png", <dum>, width: 20em)[画像]
 
-#screen("/asset/abstract/fff.png", <screenshot>)[画像]
+#screenshot("/asset/abstract/fff.png", <screenshot>)[画像]
