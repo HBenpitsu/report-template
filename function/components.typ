@@ -32,37 +32,81 @@
   )
 ]
 
-#let tabfig(columns, ..content, caption) = {
-  return figure(caption: caption)[
+#let tab(columns: auto, label, ..content, caption) = [
+  #show figure: set block(breakable: false)
+  #figure(caption: caption)[
     #three-line-table(columns: columns, ..content)
+  ]#label
+]
+
+#let longtab(columns: auto, label, ..content, caption) = [
+  #show figure: set block(breakable: true)
+  #figure(caption: caption)[
+    #three-line-table(columns: columns, ..content)
+  ]#label
+]
+
+#let bigtab(columns: auto, label, ..content, caption) = [
+  #set align(center+horizon)
+  #page[
+    #rotate(
+      -90deg,
+      reflow: true,
+      [
+        #figure(caption: caption)[
+          #three-line-table(columns: columns, ..content)
+        ]#label
+      ]
+    )
   ]
-}
+]
 
 #import "@preview/codelst:2.0.2": sourcecode, sourcefile
 
-#let codefig(body, caption) = {
-  return figure(caption: caption)[
+#let snippet(label, body, caption) = [
+  #show figure: set block(breakable: false)
+  #figure(caption: caption)[
     #sourcecode[#body]
-  ]
-}
+  ]#label
+]
 
-#let filefig(path, caption) = {
-  let parts = path.split("/")
-  let basename = parts.last()
-  let code = read(path)
-  return figure(caption: [#caption (#basename)])[
+#let code(label, body, br: true, caption) = [
+  #show figure: set block(breakable: true)
+  #set figure(placement: none)
+  #figure(caption: caption)[
+    #sourcecode[#body]
+  ]#label
+  #if (br) {pagebreak()}
+]
+
+#let _sourcefile_with_path(path, label, caption) = [
+  #let parts = path.split("/")
+  #let basename = parts.last()
+  #let code = read(path)
+  #figure(caption: [#caption (#basename)])[
     #sourcefile(code, file: path, lang: auto)
   ]
-}
+]
 
-#let imgfig(path, ..args ,caption) = {
-  return figure(caption: caption)[
+#let file(path, label, caption) = [
+  #show figure: set block(breakable: true)
+  #_sourcefile_with_path(path, label, caption)
+]
+
+#let minifile(path, label, caption) = [
+  #show figure: set block(breakable: false)
+  #_sourcefile_with_path(path, label, caption)
+]
+
+#let img(path, label, ..args ,caption) = [
+  #figure(caption: caption)[
     #image(path, ..args)
-  ]
-}
+  ]#label
+]
 
-#let scrfig(path, label, ..args, caption) = {
-  return align(center)[
+#let screen(path, label, ..args, caption) = [
+  #set align(center+horizon)
+  #page[
     #rotate(
       -90deg,
       reflow: true,
@@ -73,4 +117,4 @@
       ]
     )
   ]
-}
+]

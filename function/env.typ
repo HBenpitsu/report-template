@@ -16,12 +16,13 @@
   #body
 ]
 
-#let pagefit(cont) = [
-  #show figure: set block(breakable: false)
-  #cont
-]
-
-#let pageover(cont) = [
-  #show figure: set block(breakable: true)
-  #cont
+#let rot(body) = [
+  #set align(center+horizon)
+  #page[
+    #rotate(
+      -90deg,
+      reflow: true,
+      [#body]
+    )
+  ]
 ]
