@@ -88,13 +88,13 @@
   ]
 ]
 
-#let file(path, label, caption) = [
-  #show figure: set block(breakable: true)
+#let minifile(path, label, caption) = [
+  #show figure: set block(breakable: false)
   #_sourcefile_with_path(path, label, caption)
 ]
 
-#let minifile(path, label, caption) = [
-  #show figure: set block(breakable: false)
+#let file(path, label, caption) = [
+  #show figure: set block(breakable: true)
   #_sourcefile_with_path(path, label, caption)
 ]
 

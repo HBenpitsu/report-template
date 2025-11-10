@@ -53,14 +53,14 @@ code block
 
 これは数式ブロック$ "Bin"(n, p), integral_0^infinity f(x)d x $
 
-#tabfig(
-    3, 
+#tab(
+    <referenceToTable>, columns: 3, 
     [A], table.vline(), [B], [C],
     [1],                [x], [ ],
     [2],                [ ], [x],
-)[ここにキャプションを挿入]<referenceToTable>
+)[ここにキャプションを挿入]
 
-#codefig[
+#code(<referenceToCode>, br: false)[
 ```c
 #include <stdio.h>
 void main(void) {
@@ -68,4 +68,4 @@ void main(void) {
 	return 0;
 }
 ```
-][ここにキャプションを記入]<referenceToCode>
+][ここにキャプションを記入]

@@ -11,11 +11,14 @@
 
 // 字下げの設定
 #set par(first-line-indent: 1em)
-#show block: it => {
+// typst 0.14.0 (or under) では, block直後のparは字下げされないバグが有るのでその対応
+#let insert_dummy_par(it) = {
   it
   par("")
   v(-par.spacing * 1.5)
 }
+#show figure: insert_dummy_par
+#show heading: insert_dummy_par
 
 
 #include "content/cover.typ"
