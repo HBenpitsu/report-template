@@ -15,10 +15,12 @@
 #let insert_dummy_par(it) = {
   it
   par("")
-  v(-par.spacing * 1.5)
+  v(-par.spacing * 1.2)
 }
 #show figure: insert_dummy_par
 #show heading: insert_dummy_par
+#show list: insert_dummy_par
+#show enum: insert_dummy_par
 
 
 #include "content/cover.typ"
